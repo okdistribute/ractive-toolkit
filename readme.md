@@ -2,17 +2,13 @@
 
 Supplies a few helpers for Ractive
 
-[![NPM](https://nodei.co/npm/ractive-toolkit.png)](https://nodei.co/npm/ractive-toolkit/)
-
 ## Example
 
 index.js
 ```js
-var Ractive = require('ractive')
+var Ractive = require('ractive-toolkit')
 
-require('ractive-toolkit')
-
-... create Ractive ...
+... create new Ractive ...
 ```
 
 index.html
@@ -26,4 +22,3 @@ index.html
 
 * [pretty-bytes](https://github.com/sindresorhus/pretty-bytes)
 * [relative-date](https://github.com/azer/relative-date)
-

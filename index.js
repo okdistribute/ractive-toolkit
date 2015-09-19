@@ -11,3 +11,5 @@ templateHelpers.prettyBytes = function (bytes) {
 templateHelpers.relativeDate = function (iso) {
   return relativeDate(new Date(iso))
 }
+
+module.exports = Ractive

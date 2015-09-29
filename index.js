@@ -12,4 +12,19 @@ templateHelpers.relativeDate = function (iso) {
   return relativeDate(new Date(iso))
 }
 
+templateHelpers.filter = function (item, searchTerm, properties) {
+  if (properties) {
+    for (var i in properties) {
+      var key = properties[i]
+      if (contains(item[key], searchTerm)) return true
+    }
+    return false
+  }
+  return contains(item, searchTerm)
+}
+
+function contains (text, searchTerm) {
+  return text.toLowerCase().indexOf(searchTerm) > -1
+}
+
 module.exports = Ractive

@@ -1,6 +1,6 @@
 {
   "name": "ractive-toolkit",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "[![NPM](https://nodei.co/npm/ractive-toolkit.png)](https://nodei.co/npm/ractive-toolkit/)",
   "main": "index.js",
   "scripts": {

@@ -2,6 +2,23 @@ var Ractive = require('ractive')
 var prettyBytes = require('pretty-bytes')
 var relativeDate = require('relative-date')
 
+Ractive.events.contextmenu = function (node, fire) {
+  // intercept contextmenu events and suppress them
+  var contextmenuHandler = function (event) {
+    event.preventDefault()
+
+    // we'll pass along some coordinates. This will make more sense below
+    fire({
+      node: node,
+      original: event,
+      x: event.clientX,
+      y: event.clientY
+    })
+  }
+
+  node.addEventListener('contextmenu', contextmenuHandler)
+}
+
 var templateHelpers = Ractive.defaults.data
 
 templateHelpers.prettyBytes = function (bytes) {

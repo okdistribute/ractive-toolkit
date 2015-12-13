@@ -11,6 +11,23 @@ var Ractive = require('ractive-toolkit')
 ... create new Ractive ...
 ```
 
+## Event handlers
+
+### Context menu
+
+To fire a contextmenu event on a node:
+
+```html
+<div on-contextmenu="actions:{{i}}">
+</div>
+```
+
+```js
+self.on('actions', function (event, i) {
+  // contextmenu fired
+})
+```
+
 ## Template Helpers
 
 ### Humanizing dates and bytes
